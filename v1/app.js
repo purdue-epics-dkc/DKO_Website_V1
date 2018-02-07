@@ -1,5 +1,9 @@
 var express = require("express");
 var app = express();
+var bodyparser  = require("body-parser");
+
+app.use(bodyparser.urlencoded({extended: true}));
+
 
 app.set("view engine", "ejs");
 
@@ -7,16 +11,34 @@ app.get("/login", function(req, res) {
     res.render("login");
 });
 
-app.get("/signup", function(req, res) {
-    res.render("signup");
+app.get("/user/signup", function(req, res) {
+    res.render("user/signup");
+});
+
+app.get("/admin/signup", function(req, res) {
+    res.render("admin/signup");
 });
 
 app.post("/login", function(req, res) {
-    res.redirect("/home");
-})
+    //console.log(req);
+    console.log("username: " + req.body.username);
+    console.log("password: " + req.body.password);
+    /*
+        if (username belongs to user) then redirect to /user/home
+        if (username belongs to admin) then redirect to /admin/home 
+    */
+    //res.redirect("/user/:id/home");
+    //res.redirect("/admin/:id/home");
 
-app.get("/home", function(req, res) {
-    res.render("home");
+    res.redirect("/user/home");
+});
+
+app.get("/user/home", function(req, res) {
+    res.render("user/home");
+});
+
+app.get("/admin/home", function(req, res) {
+    res.render("admin/home");
 });
 
 app.get("/video/:id", function(req, res) {
