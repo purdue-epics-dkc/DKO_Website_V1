@@ -1,4 +1,7 @@
-<h1>Login page!</h1>
+<% include partials/header %>
+
+<div class="container">
+    <h1 id="login-header">Login page!</h1>
 
 <form action="/login" method="POST">
     <input type="text" name="username" placeholder="username">
@@ -8,3 +11,9 @@
 
 <a href="/user/signup">Create new user account</a>
 <a href="/admin/signup">Create new admin account</a>
+
+</div>
+
+
+
+<% include partials/footer %>

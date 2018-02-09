@@ -4,7 +4,7 @@ var bodyparser  = require("body-parser");
 
 app.use(bodyparser.urlencoded({extended: true}));
 
-
+app.use(express.static("public"));
 app.set("view engine", "ejs");
 
 app.get("/login", function(req, res) {
