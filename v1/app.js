@@ -63,7 +63,7 @@ app.get("/video/:id/upload", function(req, res) {
 });
 
 app.get("*", function(req, res) {
-    res.send("asdf");
+    res.render("landing");
 });
 
 app.listen(3000, function() {
