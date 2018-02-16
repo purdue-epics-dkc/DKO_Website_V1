@@ -1,5 +1,7 @@
 var express = require("express");
 var app = express();
+var request = require("request");
+
 var bodyparser  = require("body-parser");
 
 app.use(bodyparser.urlencoded({extended: true}));
@@ -39,6 +41,33 @@ app.get("/user/home", function(req, res) {
 
 app.get("/admin/home", function(req, res) {
     res.render("admin/home");
+});
+
+app.get("/videos", function(req, res) {
+
+    //res.send("<h1>Videos</h1>");
+    //console.log(req);
+
+    //var searchRoute = "http://www.khanacademy.org/api/v1/topic/trigonometry";
+    var searchRoute = "http://www.khanacademy.org/api/v1/topictree";
+    request(searchRoute, function(error, response, body) {
+        if (!error && response.statusCode === 200) {
+            //res.send(body);
+            var parsedData = JSON.parse(body);
+
+            console.log(parsedData);
+            if (parsedData["Response"] == "False") {
+                res.send("<h1>No Exercise Found!</h1>");
+            }
+            else {
+                parsedData = parsedData["children"];
+                res.send(parsedData);
+            }
+        }
+        else {
+            res.send(error);
+        }
+    });
 });
 
 app.get("/video/:id", function(req, res) {
