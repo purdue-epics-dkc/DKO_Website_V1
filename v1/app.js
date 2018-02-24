@@ -1,6 +1,14 @@
+require("dotenv").config();
+console.log(process.env.AWS_KEY);
+
 var express = require("express");
 var app = express();
+var fileUpload = require('express-fileupload');
+app.use(fileUpload());
 var request = require("request");
+var knox = require("knox-s3");
+
+
 
 var bodyparser  = require("body-parser");
 
@@ -9,8 +17,37 @@ app.use(bodyparser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
+
+var client = knox.createClient({
+    key: process.env.AWS_KEY
+  , secret: process.env.AWS_SECRET
+  , bucket: process.env.AWS_BUCKET
+});
+
 app.get("/login", function(req, res) {
     res.render("login");
+});
+
+app.get("/upload-test", function(req, res) {
+    res.render("upload-test");
+});
+
+app.post('/upload-test', function(req, res) {
+    console.log(req.files); // the uploaded file object
+
+    // var object = { foo: "bar" };
+    // var string = JSON.stringify(object);
+    // var req = client.put('/test/obj.json', {
+    //     'Content-Length': Buffer.byteLength(string)
+    //     , 'Content-Type': 'application/json'
+    // });
+    // req.on('response', function(res){
+    //     if (200 == res.statusCode) {
+    //         console.log('saved to %s', req.url);
+    //     }
+    // });
+    // req.end(string);
+
 });
 
 app.get("/user/signup", function(req, res) {
@@ -97,4 +134,5 @@ app.get("*", function(req, res) {
 
 app.listen(3000, function() {
     console.log("you have started your server");
+
 });
