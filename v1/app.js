@@ -1,25 +1,44 @@
 require("dotenv").config();
-console.log(process.env.AWS_KEY);
 
 var express = require("express");
-var app = express();
-var fileUpload = require('express-fileupload');
-app.use(fileUpload());
+var mongoose = require("mongoose");
 var request = require("request");
-var knox = require("knox-s3");
-var s3 = require('s3');
-
-
-var fs = require('fs');
-
-var AWS = require('aws-sdk');
-
+var passport = require("passport");
 var bodyparser  = require("body-parser");
 
-app.use(bodyparser.urlencoded({extended: true}));
+// Authentication requires
+var User = require("./models/user");
+var localStrategy = require("passport-local");
+var passportLocalMongoose = require("passport-local-mongoose");
 
+mongoose.connect("mongodb://localhost/dko_auth1");
+
+var app = express();
+
+// AWS Upload requires
+var knox = require("knox-s3");
+var s3 = require('s3');
+var fs = require('fs');
+var AWS = require('aws-sdk');
+var fileUpload = require('express-fileupload');
+
+app.use(fileUpload());
+app.use(bodyparser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
+
+app.use(require("express-session") ({
+    secret: "DKOWebsite", 
+    resave: false,
+    saveUninitialized: false
+}));
+
+
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new localStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 
 var client = knox.createClient({
@@ -43,9 +62,7 @@ var clientS3 = s3.createClient({
 });
 
 
-app.get("/login", function(req, res) {
-    res.render("login");
-});
+
 
 app.get("/upload-test", function(req, res) {
     res.render("upload-test");
@@ -139,26 +156,37 @@ app.get("/user/signup", function(req, res) {
     res.render("user/signup");    
 });
 
+app.post("/user/signup", function(req, res) {
+    User.register(new User({username: req.body.username, admin: false}), req.body.password, function(err, user) {
+        if(err) {
+            console.log(err);
+            return res.render("register");
+        }
+        // here is where you use different strategies
+        passport.authenticate("local")(req, res, function() {
+            res.redirect("/secret");
+    	});
+    });
+});
+
 app.get("/admin/signup", function(req, res) {
     res.render("admin/signup");
 });
 
-app.post("/login", function(req, res) {
-    //console.log(req);
-    console.log("username: " + req.body.username);
-    console.log("password: " + req.body.password);
-    /*
-        if (username belongs to user) then redirect to /user/home
-        if (username belongs to admin) then redirect to /admin/home 
-    */
-    //res.redirect("/user/:id/home");
-    //res.redirect("/admin/:id/home");
-
-    res.redirect("/user/home");
+app.get("/login", function(req, res) {
+    res.render("login");
 });
 
-app.get("/user/home", function(req, res) {
+app.post("/login", passport.authenticate("local", 
+    {
+        successRedirect: "/user/home", 
+        failureRedirect: "/login"
+    }), function(req, res) {
+});
+
+app.get("/user/home", isLoggedIN, function(req, res) {
     res.render("user/home");
+    console.log(req.user);
 });
 
 app.get("/admin/home", function(req, res) {
@@ -209,9 +237,23 @@ app.get("/video/:id/upload", function(req, res) {
     res.render("video/upload", {video: currVideo});
 });
 
+app.get("/logout", function(req, res) {
+	req.logout();
+	res.redirect("/");
+});
+
+
 app.get("*", function(req, res) {
     res.render("landing");
 });
+
+function isLoggedIN(req, res, next) {
+	if(req.isAuthenticated()) {
+		return next();
+	}
+    res.redirect("/login");
+    console.log("you not logged in boi");
+}
 
 app.listen(3000, function() {
     console.log("you have started your server");
