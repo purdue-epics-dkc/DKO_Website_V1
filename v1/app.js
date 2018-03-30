@@ -64,8 +64,12 @@ var clientS3 = s3.createClient({
 
 
 
-app.get("/upload-test", function(req, res) {
-    res.render("upload-test");
+app.get("/upload/:id/", function(req, res) {
+    console.log("video selected: " + req.params.id);
+    var currVideo = {
+        id: req.params.id
+    }
+    res.render("upload-test", {video: currVideo});
 });
 
 app.post('/upload-test', function(req, res) {
@@ -101,11 +105,15 @@ app.post('/upload-test', function(req, res) {
         uploader.on('progress', function() {
             console.log("progress", uploader.progressMd5Amount,
                     uploader.progressAmount, uploader.progressTotal);
+            //res.render("upload-progress");
         });
         uploader.on('end', function() {
             console.log("done uploading");
             //res.redirect("/download-test");
-            res.send("done uploading file");
+            //res.send("done uploading file");
+            res.render("upload-complete");
+
+            // /Users/rahulpatni/Projects/DKO_Website_V1/v1/views/upload-complete.ejs
         }); 
     });
 });

@@ -1,9 +1,29 @@
 body {
-    color: yellow;
-    background-color: purple;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    background: #348f50; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #348f50, #56b4d3); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #348f50, #56b4d3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
 }
 /*Landing page styles*/
 
+a {
+    color: black;
+}
+
+input {
+    color: black;
+}
+
+
+.center-block {
+  /* display: block;
+  margin-right: auto;
+  margin-left: auto; */
+
+  display:inline-block
+}
 
 
 /*Login page styles*/
