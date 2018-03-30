@@ -1,0 +1,690 @@
+{
+        "_id" : ObjectId("5a92398d0653cf46da420124"),
+        "domain" : "math",
+        "topic" : "graphing-sinusoids",
+        "title" : "Transforming sinusoidal graphs: vertical stretch & horizontal reflection",
+        "description" : "Sal graphs y=2*sin(-x) by considering it as a vertical stretch and a horizontal reflection of y=sin(x).",
+        "url" : "https://www.khanacademy.org/video/example-amplitude-and-period-transformations",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420125"),
+        "domain" : "math",
+        "topic" : "graphing-sinusoids",
+        "title" : "Transforming sinusoidal graphs: vertical & horizontal stretches",
+        "description" : "Sal graphs y=-2.5*cos(1/3*x) by considering it as a vertical stretch and reflection, and a horizontal stretch, of y=cos(x).",
+        "url" : "https://www.khanacademy.org/video/amplitude-and-period-cosine-transformations",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420126"),
+        "domain" : "math",
+        "topic" : "intro-to-amplitude-and-midline-of-sinusoids",
+        "title" : "Features of sinusoidal functions",
+        "description" : "Sal introduces the main features of sinusoidal functions: midline, amplitude, & period. He shows how these can be found from a sinusoidal function's graph.",
+        "url" : "https://www.khanacademy.org/video/midline-amplitude-period",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420128"),
+        "domain" : "math",
+        "topic" : "constructing-sinusoids",
+        "title" : "Trig word problem: modeling daily temperature",
+        "description" : "Sal solves a word problem about the daily change in temperature by modeling it with a sinusoidal function.",
+        "url" : "https://www.khanacademy.org/video/modeling-with-shifted-trig-functions",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420127"),
+        "domain" : "math",
+        "topic" : "constructing-sinusoids",
+        "title" : "Sinusoidal function from graph",
+        "description" : "Sal finds the equation of a sinusoidal function from its graph where the minimum point (-2,-5) and the maximum point (2,1) are highlighted.",
+        "url" : "https://www.khanacademy.org/video/trig-function-equation",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420129"),
+        "domain" : "math",
+        "topic" : "constructing-sinusoids",
+        "title" : "Trig word problem: modeling annual temperature",
+        "description" : "Sal solves a word problem about the annual change in temperature by modeling it with a sinusoidal function.",
+        "url" : "https://www.khanacademy.org/video/modeling-temperature-fluxtuations",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42012a"),
+        "domain" : "math",
+        "topic" : "constructing-sinusoids",
+        "title" : "Trig word problem: length of day (phase shift)",
+        "description" : "Sal solves a word problem about the annual change in the length of day by modeling it with a sinusoidal function that has a phase shift.",
+        "url" : "https://www.khanacademy.org/video/modeling-periodic-function-with-shift",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42012c"),
+        "domain" : "math",
+        "topic" : "law-of-sines",
+        "title" : "Solving for an angle with the law of sines",
+        "description" : "Sal is given a triangle with two side lengths and one angle measure, and he finds all the missing angle measures using the law of sines.",
+        "url" : "https://www.khanacademy.org/video/law-of-sines-example",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42012b"),
+        "domain" : "math",
+        "topic" : "law-of-sines",
+        "title" : "Solving for a side with the law of sines",
+        "description" : "Sal is given a triangle with two angle measures and one side length, and he finds all the missing side lengths and angle measures using the law of sines.",
+        "url" : "https://www.khanacademy.org/video/law-of-sines",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42012d"),
+        "domain" : "math",
+        "topic" : "law-of-sines",
+        "title" : "Proof of the law of sines",
+        "description" : "Sal gives a simple proof of the Law of sines.",
+        "url" : "https://www.khanacademy.org/video/proof-law-of-sines",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42012e"),
+        "domain" : "math",
+        "topic" : "law-of-cosines",
+        "title" : "Solving for a side with the law of cosines",
+        "description" : "Learn how to use the law of cosines to find the missing side length of a triangle when given two side lengths and the contained angle measure.",
+        "url" : "https://www.khanacademy.org/video/law-of-cosines-example",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42012f"),
+        "domain" : "math",
+        "topic" : "law-of-cosines",
+        "title" : "Solving for an angle with the law of cosines",
+        "description" : "Sal is given a triangle with all side lengths but no angle measure, and he finds one of the angle measures using the law of cosines.",
+        "url" : "https://www.khanacademy.org/video/law-of-cosines-missing-angle",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420130"),
+        "domain" : "math",
+        "topic" : "law-of-cosines",
+        "title" : "Proof of the law of cosines",
+        "description" : "Sal gives a simple proof of the Law of cosines.",
+        "url" : "https://www.khanacademy.org/video/law-of-cosines",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420131"),
+        "domain" : "math",
+        "topic" : "solving-general-triangles",
+        "title" : "Trig word problem: stars",
+        "description" : "Sal solves a word problem about the distance between stars using the law of cosines.",
+        "url" : "https://www.khanacademy.org/video/law-of-cosines-word-problem",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420132"),
+        "domain" : "math",
+        "topic" : "intro-to-trig-angle-addition-identities",
+        "title" : "Review of trig angle addition identities",
+        "description" : "Sal reviews all the different trigonometric angle addition identities: sin(a+b), sin(a-c), cos(a+b), cos(a-b), cos(2a), and sin(2a).",
+        "url" : "https://www.khanacademy.org/video/trigonometry-identity-review-fun",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420136"),
+        "domain" : "math",
+        "topic" : "intro-to-trig-angle-addition-identities",
+        "title" : "Proof of the cosine angle addition identity",
+        "description" : "Sal proves the identity cos(x+y) = cos(x)*cos(y) - sin(x)*sin(y).",
+        "url" : "https://www.khanacademy.org/video/proof-angle-addition-cosine",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420134"),
+        "domain" : "math",
+        "topic" : "intro-to-trig-angle-addition-identities",
+        "title" : "Using the cosine double-angle identity",
+        "description" : "Sal evaluates the cosine of twice an angle whose right triangle is given. To do this, he must use the cosine double-angle formula.",
+        "url" : "https://www.khanacademy.org/video/double-angle-formula-for-cosine-example-c",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420135"),
+        "domain" : "math",
+        "topic" : "intro-to-trig-angle-addition-identities",
+        "title" : "Proof of the sine angle addition identity",
+        "description" : "Sal proves the identity sin(x+y) = sin(x)*cos(y) + cos(x)*sin(y).",
+        "url" : "https://www.khanacademy.org/video/proof-angle-addition-sine",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420133"),
+        "domain" : "math",
+        "topic" : "intro-to-trig-angle-addition-identities",
+        "title" : "Using the cosine angle addition identity",
+        "description" : "Sal evaluates the cosine of the sum of 60° and another angle whose right triangle is given. To do this, he must use the cosine angle addition formula.",
+        "url" : "https://www.khanacademy.org/video/cosine-addition-identity-example",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420137"),
+        "domain" : "math",
+        "topic" : "basic-sinusoidal-equations",
+        "title" : "Solving sinusoidal equations of the form sin(x)=d",
+        "description" : "Sal finds the expressions that together represent all possible solutions to the equation sin(x)=1/3.",
+        "url" : "https://www.khanacademy.org/video/sine-solutions",
+        "__v" : 0
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("5a92398d0653cf46da42013b"),
+        "domain" : "math",
+        "topic" : "basic-graphs-of-sine-cosine-tangent",
+        "title" : "Graph of y=tan(x)",
+        "description" : "Sal draws the graph of the tangent function based on the unit circle definition of the function.",
+        "url" : "https://www.khanacademy.org/video/tangent-graph",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420139"),
+        "domain" : "math",
+        "topic" : "basic-graphs-of-sine-cosine-tangent",
+        "title" : "Graph of y=sin(x)",
+        "description" : "The graph of y=sin(x) is like a wave that forever oscillates between -1 and 1, in a shape that repeats itself every 2π units. Specifically, this means that the domain of sin(x) is all real numbers, and the range is [-1,1]. See how we find the graph of y=sin(x) using the ​unit-circle definition of sin(x).",
+        "url" : "https://www.khanacademy.org/video/we-graph-domain-and-range-of-sine-function",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42013a"),
+        "domain" : "math",
+        "topic" : "basic-graphs-of-sine-cosine-tangent",
+        "title" : "Intersection points of y=sin(x) and y=cos(x)",
+        "description" : "Sal draws the graphs of the sine and the cosine functions and analyzes their intersection points.",
+        "url" : "https://www.khanacademy.org/video/we-graphs-of-sine-and-cosine-functions",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420138"),
+        "domain" : "math",
+        "topic" : "basic-sinusoidal-equations",
+        "title" : "Solving cos(θ)=1 and cos(θ)=-1",
+        "description" : "Sal solves the equations cos(θ)=1 and cos(θ)=-1 using the graph of y=cos(θ).",
+        "url" : "https://www.khanacademy.org/video/we-graph-of-cosine-function",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42013c"),
+        "domain" : "math",
+        "topic" : "challenge-trig-problems",
+        "title" : "Trig challenge problem: area of a triangle",
+        "description" : "Sal solves a very complicated geometrical trig problem that appeared as problem 11 in the 2003 AIME II exam.",
+        "url" : "https://www.khanacademy.org/video/2003-aime-ii-problem-11-avi",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420140"),
+        "domain" : "math",
+        "topic" : "challenge-trig-problems",
+        "title" : "Trig challenge problem: maximum value",
+        "description" : "Sal solves a very complicated algebraic trig problem that appeared as problem 48 in the 2010 IIT JEE Paper I exam.",
+        "url" : "https://www.khanacademy.org/video/iit-jee-trigonometric-maximum",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42013e"),
+        "domain" : "math",
+        "topic" : "challenge-trig-problems",
+        "title" : "Trig challenge problem: cosine of angle-sum",
+        "description" : "Sal is given cos(θ) and cos(φ) and he finds cos(θ+φ). To do that, he must first find sin(θ) and sin(φ) using the Pythagorean identity.",
+        "url" : "https://www.khanacademy.org/video/cosine-angle-addition-2",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42013f"),
+        "domain" : "math",
+        "topic" : "challenge-trig-problems",
+        "title" : "Trig challenge problem: arithmetic progression",
+        "description" : "Sal solves a very complicated algebraic trig problem that appeared as problem 29 in the 2010 IIT JEE Paper I exam.",
+        "url" : "https://www.khanacademy.org/video/iit-jee-trigonometry-problem-1",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42013d"),
+        "domain" : "math",
+        "topic" : "challenge-trig-problems",
+        "title" : "Trig challenge problem: area of a hexagon",
+        "description" : "Sal solves a very complicated geometrical trig problem that appeared as problem 14 in the 2003 AIME II exam.",
+        "url" : "https://www.khanacademy.org/video/2003-aime-ii-problem-14",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420141"),
+        "domain" : "math",
+        "topic" : "challenge-trig-problems",
+        "title" : "Trig challenge problem: multiple constraints",
+        "description" : "Sal solves a very complicated algebraic trig problem that appeared as problem 47 in the 2010 IIT JEE Paper I exam.",
+        "url" : "https://www.khanacademy.org/video/iit-jee-trigonometric-constraints",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420145"),
+        "domain" : "math",
+        "topic" : "using-trig-identities",
+        "title" : "Using trig angle addition identities: manipulating expressions",
+        "description" : "Sal is given that cos(2θ)=C and he uses the cosine double-angle identity in order to find an expression for sin(θ).",
+        "url" : "https://www.khanacademy.org/video/cosine-angle-addition",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420143"),
+        "domain" : "math",
+        "topic" : "using-trig-identities",
+        "title" : "Finding trig values using angle addition identities",
+        "description" : "Sal finds the value of sin(7π/12) by rewriting it as sin(π/3+π/4) and then using the sine angle addition formula.",
+        "url" : "https://www.khanacademy.org/video/sine-angle-addition-2",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420144"),
+        "domain" : "math",
+        "topic" : "using-trig-identities",
+        "title" : "Using trig angle addition identities: finding side lengths",
+        "description" : "Sal is given a drawing with two triangles and some side lengths, and he uses the sine angle addition identity in order to find a missing side length.",
+        "url" : "https://www.khanacademy.org/video/sin-angle-addition",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420142"),
+        "domain" : "math",
+        "topic" : "challenge-trig-problems",
+        "title" : "Trig challenge problem: system of equations",
+        "description" : "Sal solves a very complicated algebraic trig problem that appeared as problem 55 in the 2010 IIT JEE Paper I exam.",
+        "url" : "https://www.khanacademy.org/video/trigonometric-system-example",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42014a"),
+        "domain" : "math",
+        "topic" : "intro-to-the-trig-ratios",
+        "title" : "Trigonometric ratios in right triangles",
+        "description" : "Sal shows a few examples where he starts with the two legs of a right triangle and he finds the trig ratios of one of the acute angles.",
+        "url" : "https://www.khanacademy.org/video/basic-trigonometry-ii",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420146"),
+        "domain" : "math",
+        "topic" : "using-trig-identities",
+        "title" : "Using trigonometric identities",
+        "description" : "Rewrite trigonometric expressions using the Pythagorean identity and other trigonometric identities.",
+        "url" : "https://www.khanacademy.org/video/examples-using-pythagorean-identities-to-simplify-trigonometric-expressions",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420148"),
+        "domain" : "math",
+        "topic" : "amplitude-and-midline-of-sinusoids-from-formulas",
+        "title" : "Amplitude & period of sinusoidal functions from equation",
+        "description" : "Sal finds the amplitude and the period of y=-0.5cos(3x).",
+        "url" : "https://www.khanacademy.org/video/we-amplitude-and-period",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420149"),
+        "domain" : "math",
+        "topic" : "intro-to-the-trig-ratios",
+        "title" : "Intro to the trigonometric ratios",
+        "description" : "Sal introduces sine, cosine, and tangent, and gives an example of finding them for a given right triangle.",
+        "url" : "https://www.khanacademy.org/video/basic-trigonometry",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420147"),
+        "domain" : "math",
+        "topic" : "solving-sinusoidal-models",
+        "title" : "Trig word problem: solving for temperature",
+        "description" : "Sal solves a word problem about the annual change in temperature by solving a sinusoidal equation.",
+        "url" : "https://www.khanacademy.org/video/inverse-trig-with-model",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42014b"),
+        "domain" : "math",
+        "topic" : "trig-ratios-similarity",
+        "title" : "Triangle similarity & the trigonometric ratios",
+        "description" : "Sal explains how the trigonometric ratios are derived from triangle similarity considerations.",
+        "url" : "https://www.khanacademy.org/video/similarity-to-define-sine-cosine-and-tangent",
+        "__v" : 0
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("5a92398d0653cf46da42014d"),
+        "domain" : "math",
+        "topic" : "trig-ratios-similarity",
+        "title" : "Trig challenge problem: trig values & side ratios",
+        "description" : "Sal is given a diagram with multiple right triangles and is asked to match different expressions with different trig values.",
+        "url" : "https://www.khanacademy.org/video/example-relating-trig-function-to-side-ratios",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42014c"),
+        "domain" : "math",
+        "topic" : "trig-ratios-similarity",
+        "title" : "Trig challenge problem: verify identities",
+        "description" : "Sal is given a diagram with multiple right triangles and is asked to verify identities relating to trig ratios in those triangles.",
+        "url" : "https://www.khanacademy.org/video/example-with-trig-functions-and-ratios",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42014e"),
+        "domain" : "math",
+        "topic" : "inverse-trig-functions",
+        "title" : "Intro to arcsine",
+        "description" : "Sal introduces arcsine, which is the inverse function of sine, and discusses its principal range.",
+        "url" : "https://www.khanacademy.org/video/inverse-trig-functions-arcsin",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42014f"),
+        "domain" : "math",
+        "topic" : "inverse-trig-functions",
+        "title" : "Intro to arctangent",
+        "description" : "Sal introduces arctangent, which is the inverse function of tangent, and discusses its principal range.",
+        "url" : "https://www.khanacademy.org/video/inverse-trig-functions-arctan",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420150"),
+        "domain" : "math",
+        "topic" : "inverse-trig-functions",
+        "title" : "Intro to arccosine",
+        "description" : "Sal introduces arccosine, which is the inverse function of cosine, and discusses its principal range.",
+        "url" : "https://www.khanacademy.org/video/inverse-trig-functions-arccos",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420151"),
+        "domain" : "math",
+        "topic" : "inverse-trig-functions",
+        "title" : "Restricting domains of functions to make them invertible",
+        "description" : "Sal is given the graph of a trigonometric function, and he discusses ways in which he can change the function to make it invertible.",
+        "url" : "https://www.khanacademy.org/video/restricting-trig-function-domain",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420152"),
+        "domain" : "math",
+        "topic" : "inverse-trig-functions",
+        "title" : "Domain & range of inverse tangent function",
+        "description" : "Sal find the formula for the inverse function of g(x)=tan(x-3π/2)+6, and then determines the domain of that inverse function.",
+        "url" : "https://www.khanacademy.org/video/inverse-tan-domain",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420153"),
+        "domain" : "math",
+        "topic" : "inverse-trig-functions",
+        "title" : "Using inverse trig functions with a calculator",
+        "description" : "Sal discusses the appropriate way to use the calculator in order to find an angle when its tangent value is given.",
+        "url" : "https://www.khanacademy.org/video/inverse-tan-scenario",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420154"),
+        "domain" : "math",
+        "topic" : "reciprocal-trig-ratios",
+        "title" : "Finding reciprocal trig ratios",
+        "description" : "Sal finds all six trigonometric ratios (sine, cosine, tangent, secant, cosecant, and cotangent) of an angle in a given right triangle.",
+        "url" : "https://www.khanacademy.org/video/example-the-six-trig-ratios",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420155"),
+        "domain" : "math",
+        "topic" : "reciprocal-trig-ratios",
+        "title" : "Using reciprocal trig ratios",
+        "description" : "Sal is given two sides in a right triangle and the cotangent of one of the angles, and he uses this information to find the missing side.",
+        "url" : "https://www.khanacademy.org/video/example-using-trig-to-solve-for-missing-information",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420156"),
+        "domain" : "math",
+        "topic" : "sine-and-cosine-of-complementary-angles",
+        "title" : "Sine & cosine of complementary angles",
+        "description" : "Sal shows that the sine of any angle is equal to the cosine of its complementary angle.",
+        "url" : "https://www.khanacademy.org/video/showing-relationship-between-cosine-and-sine-of-complements",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420158"),
+        "domain" : "math",
+        "topic" : "sine-and-cosine-of-complementary-angles",
+        "title" : "Trig word problem: complementary angles",
+        "description" : "Sal solves a problem about a submerged pyramid using the fact that the sine of an angle is equal to the cosine of its complementary angle.",
+        "url" : "https://www.khanacademy.org/video/how-much-of-a-pyramid-is-submerged",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420157"),
+        "domain" : "math",
+        "topic" : "sine-and-cosine-of-complementary-angles",
+        "title" : "Using complementary angles",
+        "description" : "Sal solved the following problem: Given that cos(58°)=0.53, find sin(32°).",
+        "url" : "https://www.khanacademy.org/video/sine-and-cosine-of-complements-example",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420159"),
+        "domain" : "math",
+        "topic" : "trig-identities",
+        "title" : "Sine & cosine identities: symmetry",
+        "description" : "Sal finds several trigonometric identities for sine and cosine by considering horizontal and vertical symmetries of the unit circle.",
+        "url" : "https://www.khanacademy.org/video/trigonometry-unit-circle-symmetry",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42015a"),
+        "domain" : "math",
+        "topic" : "trig-identities",
+        "title" : "Tangent identities: symmetry",
+        "description" : "Sal finds several trigonometric identities for tangent by considering horizontal and vertical symmetries of the unit circle.",
+        "url" : "https://www.khanacademy.org/video/tan-symmetries-unit-circle",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42015b"),
+        "domain" : "math",
+        "topic" : "trig-identities",
+        "title" : "Sine & cosine identities: periodicity",
+        "description" : "Sal finds trigonometric identities for sine and cosine by considering angle rotations on the unit circle.",
+        "url" : "https://www.khanacademy.org/video/trig-angle-rotations",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42015c"),
+        "domain" : "math",
+        "topic" : "trig-identities",
+        "title" : "Tangent identities: periodicity",
+        "description" : "Sal solves a problem by considering the periodicity of the tangent function.",
+        "url" : "https://www.khanacademy.org/video/tan-periodicity",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42015d"),
+        "domain" : "math",
+        "topic" : "trig-solve-for-a-side",
+        "title" : "Solving for a side in right triangles with trigonometry",
+        "description" : "Sal is given a right triangle with an acute angle of 65° and a leg of 5 units, and he uses trigonometry to find the two missing sides.",
+        "url" : "https://www.khanacademy.org/video/example-trig-to-solve-the-sides-and-angles-of-a-right-triangle",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42015e"),
+        "domain" : "math",
+        "topic" : "modeling-with-right-triangles",
+        "title" : "Right triangle word problem",
+        "description" : "Sal solves a modeling problem where he finds the necessary angle to shoot at a vicious alien.",
+        "url" : "https://www.khanacademy.org/video/angle-to-aim-to-get-alien",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420160"),
+        "domain" : "math",
+        "topic" : "unit-circle-definition-of-trig-functions",
+        "title" : "The trig functions & right triangle trig ratios",
+        "description" : "Sal shows how, for acute angles, the two different definitions of the trigonometric values (SOH CAH TOA and the unit circle definition) result in the same values.",
+        "url" : "https://www.khanacademy.org/video/matching-ratios-trig-functions",
+        "__v" : 0
+}
+Type "it" for more
+> it
+{
+        "_id" : ObjectId("5a92398d0653cf46da42015f"),
+        "domain" : "math",
+        "topic" : "unit-circle-definition-of-trig-functions",
+        "title" : "Unit circle",
+        "description" : "Learn how to use the unit circle to define sine, cosine, and tangent for all real numbers.",
+        "url" : "https://www.khanacademy.org/video/unit-circle-definition-of-trig-functions-1",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420161"),
+        "domain" : "math",
+        "topic" : "pythagorean-identity",
+        "title" : "Proof of the Pythagorean trig identity",
+        "description" : "Sal proves the Pythagorean identity (sinθ)^2+(cosθ)^2=1 for all real numbers.",
+        "url" : "https://www.khanacademy.org/video/pythagorean-trig-identity-from-unit-circle",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420162"),
+        "domain" : "math",
+        "topic" : "pythagorean-identity",
+        "title" : "Using the Pythagorean trig identity",
+        "description" : "Given that sin(θ)=1/2 and that θ is in the second quadrant, Sal finds tan(θ) using the Pythagorean identity.",
+        "url" : "https://www.khanacademy.org/video/using-the-pythagorean-trig-identity",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420163"),
+        "domain" : "math",
+        "topic" : "intro-to-the-pythagorean-identity",
+        "title" : "Intro to the Pythagorean trig identity",
+        "description" : "Sal introduces and proves the identity (sinθ)^2+(cosθ)^2=1, which arises from the Pythagorean theorem!",
+        "url" : "https://www.khanacademy.org/video/pythagorean-trig-identity-from-soh-cah-toa",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420164"),
+        "domain" : "math",
+        "topic" : "intro-to-radians-trig",
+        "title" : "Intro to radians",
+        "description" : "Sal explains the definition and motivation for radians and the relationship between radians and degrees.",
+        "url" : "https://www.khanacademy.org/video/introduction-to-radians",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420165"),
+        "domain" : "math",
+        "topic" : "intro-to-radians-trig",
+        "title" : "Radians & degrees",
+        "description" : "Sal discusses the general approach to converting between radians and degrees and vice versa.",
+        "url" : "https://www.khanacademy.org/video/radian-and-degree-conversion-practice",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420166"),
+        "domain" : "math",
+        "topic" : "intro-to-radians-trig",
+        "title" : "Degrees to radians",
+        "description" : "Sal converts the degree measures 150° and -45° to radians.",
+        "url" : "https://www.khanacademy.org/video/we-converting-degrees-to-radians",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420167"),
+        "domain" : "math",
+        "topic" : "intro-to-radians-trig",
+        "title" : "Radians to degrees",
+        "description" : "Sal converts the radian measures π and -π/3 to degrees.",
+        "url" : "https://www.khanacademy.org/video/we-converting-radians-to-degrees",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420168"),
+        "domain" : "math",
+        "topic" : "intro-to-radians-trig",
+        "title" : "Radian angles & quadrants",
+        "description" : "Sal determines the quadrant at which a ray falls after a rotation by a certain measure of radians.",
+        "url" : "https://www.khanacademy.org/video/rotation-by-radians-and-quadrants",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da420169"),
+        "domain" : "math",
+        "topic" : "trig-values-special-angles",
+        "title" : "Trig values of special angles",
+        "description" : "Sal finds the trigonometric values of π/4 using the unit-circle definition.",
+        "url" : "https://www.khanacademy.org/video/solving-triangle-unit-circle",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42016a"),
+        "domain" : "math",
+        "topic" : "long-live-tau",
+        "title" : "Tau versus pi",
+        "description" : "Why Tau might be a better number to look at than Pi",
+        "url" : "https://www.khanacademy.org/video/tau-versus-pi",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42016b"),
+        "domain" : "math",
+        "topic" : "long-live-tau",
+        "title" : "Pi is (still) wrong",
+        "description" : "Please excuse the simple math and spelling errors. You shouldn't believe anything I say without double-checking even at the best of times. Go here: http://tauday.com/ and here: http://www.math.utah.edu/~palais/pi.html Me: http://vihart.com",
+        "url" : "https://www.khanacademy.org/video/pi-is-still-wrong",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42016c"),
+        "domain" : "math",
+        "topic" : "graphs-of-sine-cosine-tangent",
+        "title" : "Graph of y=sin(x)",
+        "description" : "The graph of y=sin(x) is like a wave that forever oscillates between -1 and 1, in a shape that repeats itself every 2π units. Specifically, this means that the domain of sin(x) is all real numbers, and the range is [-1,1]. See how we find the graph of y=sin(x) using the ​unit-circle definition of sin(x).",
+        "url" : "https://www.khanacademy.org/video/we-graph-domain-and-range-of-sine-function",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42016d"),
+        "domain" : "math",
+        "topic" : "graphs-of-sine-cosine-tangent",
+        "title" : "Graph of y=tan(x)",
+        "description" : "Sal draws the graph of the tangent function based on the unit circle definition of the function.",
+        "url" : "https://www.khanacademy.org/video/tangent-graph",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42016e"),
+        "domain" : "math",
+        "topic" : "graphs-of-sine-cosine-tangent",
+        "title" : "Intersection points of y=sin(x) and y=cos(x)",
+        "description" : "Sal draws the graphs of the sine and the cosine functions and analyzes their intersection points.",
+        "url" : "https://www.khanacademy.org/video/we-graphs-of-sine-and-cosine-functions",
+        "__v" : 0
+}
+{
+        "_id" : ObjectId("5a92398d0653cf46da42016f"),
+        "domain" : "math",
+        "topic" : "period-of-sinusoids",
+        "title" : "Amplitude & period of sinusoidal functions from equation",
+        "description" : "Sal finds the amplitude and the period of y=-0.5cos(3x).",
+        "url" : "https://www.khanacademy.org/video/we-amplitude-and-period",
+        "__v" : 0
+}
