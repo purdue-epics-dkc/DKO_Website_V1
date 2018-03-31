@@ -1,9 +1,9 @@
 body {
     color: white;
     font-family: 'Roboto', sans-serif;
-    background: #348f50; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #348f50, #56b4d3); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #348f50, #56b4d3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #615CEE; /* fallback for old browsers */
+    /*background: -webkit-linear-gradient(to right, #AAD00F, #00E0CD); /* Chrome 10-25, Safari 5.1-6 */
+    /*background: linear-gradient(to right, #AAD00F, #00E0CD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
 }
 /*Landing page styles*/
@@ -16,7 +16,10 @@ input {
     color: black;
 }
 
-
+.uploadForm {
+  display: inline-block;
+    text-align: center;  
+}
 .center-block {
   /* display: block;
   margin-right: auto;
@@ -30,4 +33,60 @@ input {
 
 #login-header {
     text-align: center;
+}
+
+#landing-header {
+    text-align: center;
+}
+
+.button {
+    color: #615CEE;
+    background-color: white;
+    padding: 10px 100px;
+    align-items: center;
+    left:50%;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 12px;
+    justify-content: center;
+    display: inline-block;
+}
+
+#footer {
+    color: white;
+    position:absolute;
+   bottom:0;
+   width:90%;
+   float: left;
+   height:20px;   /* Height of the footer */
+   text-align: center;
+}
+
+div{
+    text-align:center;
+}
+
+.glyphicon {
+    font-size: 50px;
+}
+
+.columnLanding {
+    float: left;
+    width: 25%;
+    padding: 30px;
+    height: 300px; /* Should be removed. Only for demonstration */
+    font-size: 16px;
+}
+row {
+    text-align: center;
+}
+
+.disclosure {
+    width: 500px;
+    text-align: center;
+    align: center;
+    margin-left:auto;
+    margin-right: auto;
+    border:thin;
+    border:3px solid #00E0CD;
 }
