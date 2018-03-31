@@ -2,9 +2,17 @@
 
 <div class="container">
 
-    <h1>Upload video!</h1>
+    <h1>Video Upload</h1>
 
-    <p class="text-center">You are uploading video with id: <%= video.id %></p>
+  <div class="disclosure">
+  <h2>Disclosure Agreement</h2>
+<p>IU still sucks</p>
+</div>
+
+<form action="">
+<br>
+<input type="checkbox" id="agreement" value="agreement"> I agree to the terms and conditions above<br> 
+</form>
 
     <form ref='uploadForm' id='uploadForm' action="/upload-test/" method="POST" encType="multipart/form-data">
             <p><input type="file" name="sampleFile" /></p>
