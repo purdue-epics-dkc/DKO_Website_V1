@@ -61,8 +61,26 @@ var clientS3 = s3.createClient({
     },
 });
 
+app.get("/select-videos", function(req, res) {
+    var subjects = ["math", "science", "computing"];
+    var topics = {
+        "math": ["early-math", "ap-calculus-ab", "trigonometry", "algebra", "multivariable-calculus", "geomtry", 
+        "arithmetic", "precalculus", "pre-algebra", "differential-equations", "ap-calculus-bc", "algebra2", 
+        "linear-algebra", "ap-statistics", "statistics-probability"],
+        "science": ["physics", "chemistry", "organic-chemistry", "biology", "high-school-biology",
+        "cosmology-and-astronomy", "electrical-engineering", "health-and-medicine", "science-engineering-partners"],
+        "computing": ["computer-programming", "hour-of-code", "computer-animation"]
+    };
+
+    res.render("select-video", {topics: topics});
+});
+
+// computing/computer-programming
+// computing/computer-science
+// math/multivariable-calculus
 
 
+// db.videos_info.find({ tree_path: { $regex: '^math\\+\\$\\+geometry\\+\\$\\+hs\\-geo\\-f.*'} }).count()
 
 app.get("/upload/:id/", function(req, res) {
     console.log("video selected: " + req.params.id);

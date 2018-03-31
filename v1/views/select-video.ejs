@@ -1,0 +1,30 @@
+<% include ./partials/header %>
+
+<div class="container">
+
+<h1>Select a subject</h1>
+<br>
+
+<% Object.keys(topics).forEach(function(key) { %>
+
+<p>
+    <button class="btn btn-outline-light btn-block" type="button" data-toggle="collapse" data-target="#multiCollapseExample<%=key%>" aria-expanded="false" aria-controls="multiCollapseExample2"><%=key%></button>
+</p>
+
+<div class="row">
+    <div class="col" id ="subjecttopic">
+        <div class="collapse multi-collapse" id="multiCollapseExample<%=key%>">
+        <div class="card card-body">
+			<% topics[key].forEach(function(innerkey) { %>
+				<p><a href="/select-videos/<%= key %>/<%= innerkey %>"><%= innerkey %></a></p>
+			<% }) %>
+        </div>
+        </div>
+    </div>
+</div>
+
+<% }) %>
+
+</div>
+
+<% include ./partials/footer %>

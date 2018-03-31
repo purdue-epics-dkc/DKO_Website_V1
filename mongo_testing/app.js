@@ -5,7 +5,7 @@ var request  = require("request");
 
 var mongoose    = require("mongoose");
 
-mongoose.connect("mongodb://localhost/dko_test1");
+mongoose.connect("mongodb://localhost/dko_auth1");
 app.use(bodyparser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -45,8 +45,10 @@ app.get("/all-results/:domain_id/:video_id", function(req, res) {
     var topic_id = req.params.video_id;
     if (!(topic_id.length == 0 || topic_id == null)) {
         topic = topic_id;
-    
-    } 
+    } else {
+        res.send("Invalid topic");
+        return;
+    }
 
     console.log("\n\nDOWNLOADING" + topic + "\n\n");
 
@@ -55,11 +57,12 @@ app.get("/all-results/:domain_id/:video_id", function(req, res) {
 
     if (!(domain_id.length == 0 || domain_id == null)) {
         domain = domain_id;
-    
-    } 
+    } else {
+        res.send("Invalid domain");
+        return;
+    }
 
     var path = domain + "+$+";
-
 
     createRequestWithTopic(topic, path);
     res.send("<h1>Got All Results</h1>")
@@ -92,6 +95,8 @@ function goThroughChildren(children, topic, domain, path) {
 
 function addChildToDatabase(child, topic, domain, path) {
     var data = {
+        user_id: null, 
+        admin_id: null,
         tree_path: path,
         domain: domain,
         topic: topic, 
@@ -116,37 +121,3 @@ function addChildToDatabase(child, topic, domain, path) {
 app.listen(3000, function(req, res) {
     console.log("Started Mongo Testing Server");
 });
-
-
-// var MongoClient = require('mongodb').MongoClient;
-// var url = "mongodb://localhost:27017/";
-
-// var express = require("express");
-// var app = express();
-// var request = require("request");
-// //app.set("view engine", "ejs"); 
-
-// app.get("/results", function(req, res)
-// {
-//     request("https://www.khanacademy.org/api/v1/topic/cc-early-math-counting/videos", function(error, response, body){
-//         if(!error && response.statusCode == 200){
-//             var data = JSON.parse(body) 
-//         }       
-//     });
-// });
-
-// MongoClient.connect(url, function(err, db) {
-//   if (err) throw err;
-//   var dbo = db.db("Videos");url
-//   var myobj = { ka_url: "******", title: "******"  ,description: "******", downloadURL: "******", url: "******"};
-//   dbo.collection("video").insertOne(myobj, function(err, res) {
-//     if (err) throw err;
-//     console.log("1 document inserted");
-
-//     dbo.collection("video").find({}).toArray(function(err, result) {
-//     if (err) throw err;
-//     console.log(result);
-//   });
-//     db.close();
-//   });
-// });
