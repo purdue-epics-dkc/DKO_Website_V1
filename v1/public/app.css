@@ -13,6 +13,10 @@ body {
 
 }
 
+#selected-video-table tbody {
+    font-size: smaller;
+}
+
 h1 {
     color: white;
 }
@@ -24,7 +28,11 @@ input {
 
 #bottom-nav {
     margin-top: 100px;
-    height: 50px;
+    height: 40px;
+}
+
+#bottom-nav a {
+    font-size: smaller;
 }
 
 .center-block {

@@ -15,6 +15,23 @@ mongoose.connect("mongodb://localhost/dko_auth1");
 
 var app = express();
 
+// mongo stuff
+
+var videoSchema = new mongoose.Schema({
+    user_id: String, 
+    admin_id: String, 
+    tree_path: String,
+    domain: String,
+    topic: String, 
+    title: String, 
+    description: String, 
+    url: String,
+    uploaded: Boolean,
+    approved: Boolean
+}, { collection: 'videos_info' });
+
+var Video = mongoose.model("video", videoSchema);
+
 // AWS Upload requires
 var knox = require("knox-s3");
 var s3 = require('s3');
@@ -72,7 +89,20 @@ app.get("/select-videos", function(req, res) {
         "computing": ["computer-programming", "hour-of-code", "computer-animation"]
     };
 
-    res.render("select-video", {topics: topics});
+    res.render("select-videos", {topics: topics});
+});
+
+app.get("/select-videos/:domain/:topic", function(req, res) {
+    var regexQuery = '^' + req.params.domain + '\\+\\$\\+' + req.params.topic + '.*';
+    console.log(regexQuery);
+    Video.find({ tree_path: { $regex: regexQuery} }, function(err, foundVideos) {
+        if (err) {
+            res.err(err + " \n " + regexQuery);
+        } else {
+            // res.send(foundVideos);
+            res.render("selected-videos", {domain: req.params.domain, topic: req.params.topic, videos: foundVideos});
+        }
+    });
 });
 
 // computing/computer-programming
