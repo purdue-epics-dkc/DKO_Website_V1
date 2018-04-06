@@ -25,7 +25,10 @@ var videoSchema = new mongoose.Schema({
     topic: String, 
     title: String, 
     description: String, 
-    url: String,
+    ka_url: String,
+    youtube_url: String,
+    embed_url: String,
+    image_url: String,
     uploaded: Boolean,
     approved: Boolean
 }, { collection: 'videos_info' });
@@ -119,6 +122,7 @@ app.get("/upload/:id/", isLoggedIN, function(req, res) {
         if (err) {
             res.err(err + " \n " + regexQuery);
         } else {
+            console.log(currVideo);
             res.render("upload-test", {video: currVideo});
         }
     });

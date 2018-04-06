@@ -60,6 +60,10 @@ input {
     font-size: 50px;
 }
 
+.table-scrollable{
+    overflow: auto;
+}
+
 .landing-button {
     color: #615CEE;
     background-color: white;

@@ -18,7 +18,10 @@ var videoSchema = new mongoose.Schema({
     topic: String, 
     title: String, 
     description: String, 
-    url: String,
+    ka_url: String,
+    youtube_url: String,
+    embed_url: String,
+    image_url: String,
     uploaded: Boolean,
     approved: Boolean
 }, { collection: 'videos_info' });
@@ -94,28 +97,65 @@ function goThroughChildren(children, topic, domain, path) {
 }
 
 function addChildToDatabase(child, topic, domain, path) {
-    var data = {
-        user_id: null, 
-        admin_id: null,
-        tree_path: path,
-        domain: domain,
-        topic: topic, 
-        title: child.translated_title, 
-        description: child.description, 
-        url: child.url,
-        uploaded: false,
-        approved: false
-    };
-    // console.log(data);
-    Video.create(data, function(err, video) {
-        if (err) {
-            console.log("Error adding child to database\n" + child);
-            console.log(err);
-        } else {
-            console.log("Created Video " + data.title);
-            // console.log(video);
+    var videoUrl = "http://www.khanacademy.org/api/v1/videos/" + child.id;
+
+    request(videoUrl, function(error, response, body) {
+        if(!error && response.statusCode == 200){
+
+            var currData = JSON.parse(body);
+
+            var currVideo = {
+                user_id: null, 
+                admin_id: null, 
+                tree_path: path,
+                domain: domain,
+                topic: topic, 
+                title: currData.translated_title,
+                description: currData.description_html, 
+                ka_url: currData.ka_url,
+                youtube_url: currData.url,
+                embed_url: "http://www.youtube.com/embed/" + currData.translated_youtube_id,
+                image_url: currData.image_url,
+                uploaded: false,
+                approved: false
+            }
+            console.log("////////////////////////");
+            console.log(currVideo);
+
+            Video.create(currVideo, function(err, video) {
+                if (err) {
+                    console.log("Error adding child to database\n" + child);
+                    console.log(err);
+                } else {
+                    console.log("Created Video " + currVideo.title);
+                    // console.log(video);
+                }
+            });
         }
     });
+    // var data = {
+    //     user_id: null, 
+    //     admin_id: null,
+    //     tree_path: path,
+    //     domain: domain,
+    //     topic: topic, 
+    //     title: child.translated_title, 
+    //     description: child.description, 
+    //     url: child.url,
+    //     uploaded: false,
+    //     approved: false
+    // };
+    // console.log(data);
+    // console.log("++++++++++++++++++++++++++");
+    // Video.create(data, function(err, video) {
+    //     if (err) {
+    //         console.log("Error adding child to database\n" + child);
+    //         console.log(err);
+    //     } else {
+    //         console.log("Created Video " + data.title);
+    //         // console.log(video);
+    //     }
+    // });
 }
 
 app.listen(3000, function(req, res) {

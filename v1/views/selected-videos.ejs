@@ -1,6 +1,6 @@
 <% include ./partials/header %>
 
-<div class="container">
+<div class="container table-scrollable">
 
 <h1>Your search results for <%= topic %> videos in <%= domain %> </h1>
 <br>
@@ -22,7 +22,7 @@
                 <th scope="row"><%= i %></th>
                 <% i = i + 1 %>
                 <td>   
-                    <a href="<%= video.url %>"><%= video.title %></a>
+                    <a href="<%= video.ka_url %>"><%= video.title %></a>
                 </td>
                 <td><%= video.description %></td>
                 <td>
