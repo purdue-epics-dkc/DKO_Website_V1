@@ -78,7 +78,7 @@ var clientS3 = s3.createClient({
     },
 });
 
-app.get("/select-videos", function(req, res) {
+app.get("/select-videos", isLoggedIN, function(req, res) {
     var subjects = ["math", "science", "computing"];
     var topics = {
         "math": ["early-math", "ap-calculus-ab", "trigonometry", "algebra", "multivariable-calculus", "geomtry", 
@@ -92,7 +92,7 @@ app.get("/select-videos", function(req, res) {
     res.render("select-videos", {topics: topics});
 });
 
-app.get("/select-videos/:domain/:topic", function(req, res) {
+app.get("/select-videos/:domain/:topic", isLoggedIN, function(req, res) {
     var regexQuery = '^' + req.params.domain + '\\+\\$\\+' + req.params.topic + '.*';
     console.log(regexQuery);
     Video.find({ tree_path: { $regex: regexQuery} }, function(err, foundVideos) {
@@ -112,15 +112,19 @@ app.get("/select-videos/:domain/:topic", function(req, res) {
 
 // db.videos_info.find({ tree_path: { $regex: '^math\\+\\$\\+geometry\\+\\$\\+hs\\-geo\\-f.*'} }).count()
 
-app.get("/upload/:id/", function(req, res) {
+app.get("/upload/:id/", isLoggedIN, function(req, res) {
     console.log("video selected: " + req.params.id);
-    var currVideo = {
-        id: req.params.id
-    }
-    res.render("upload-test", {video: currVideo});
+
+    Video.findById(req.params.id, function(err, currVideo) {
+        if (err) {
+            res.err(err + " \n " + regexQuery);
+        } else {
+            res.render("upload-test", {video: currVideo});
+        }
+    });
 });
 
-app.post('/upload-test', function(req, res) {
+app.post('/upload-test', isLoggedIN, function(req, res) {
     console.log(req.files); // the uploaded file object
 
     var sampleFile = req.files.sampleFile;
@@ -280,12 +284,12 @@ app.get("/video/:id", function(req, res) {
     res.render("video/new", {video: currVideo});
 });
 
-app.post("/video/:id", function(req, res) {
+app.post("/video/:id", isLoggedIN, function(req, res) {
     console.log("video upload: " + req.params.id);
     res.redirect("/video/" + req.params.id +"/upload");
 });
 
-app.get("/video/:id/upload", function(req, res) {
+app.get("/video/:id/upload", isLoggedIN, function(req, res) {
     console.log("video upload redirect: " + req.params.id);
     var currVideo = {
         id: req.params.id
