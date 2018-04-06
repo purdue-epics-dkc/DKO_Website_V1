@@ -1,47 +1,16 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,500);
-
-body {
-  padding-top: 90px;
-  background:#F7F7F7;
-  color:#666666;
-  font-family: 'Roboto', sans-serif;
-  font-weight:100;
-}
-
-body{
+#loginbody{
   width: 100%;
   /* background: -webkit-linear-gradient(left, #F61775, #F972AB, #F61775, #F972AB); */
   /* background: linear-gradient(#F61775, #F972AB); */
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
   background-size: 600% 100%;
   /* -webkit-animation: HeroBG 20s ease infinite;
           animation: HeroBG 20s ease infinite; */
+  padding-top: 90px;
+  /* background:#F7F7F7; */
+  color:#666666;
+  font-weight:100;
 }
-
-@-webkit-keyframes HeroBG {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 100% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
-@keyframes HeroBG {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 100% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
-
 
 .panel {
   border-radius: 5px;
@@ -212,25 +181,3 @@ label {
   text-decoration: underline;
   color: #666;
 }
-
-/* .btn-register {
-  background-color: #E8E9EC;
-  outline: none;
-  color: #2D3B55;
-  font-size: 14px;
-  height: auto;
-  font-weight: normal;
-  padding: 14px 0;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 0px;
-  box-shadow: none;
-}
-.btn-register:hover,
-.btn-register:focus {
-  color: #fff;
-  background-color: #2D3B55;
-} */
-
-
-
