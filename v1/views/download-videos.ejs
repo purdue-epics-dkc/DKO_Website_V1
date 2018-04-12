@@ -1,0 +1,33 @@
+<% include ./partials/header %>
+
+<div class="container">
+    <h1>These are a list of uploaded videos</h1>
+    <br>
+    <table id="selected-video-table" class="table table-hover table-sm table-dark table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Video Name</th>
+                    <th scope="col" colspan="2">Description</th>
+                </tr>
+            </thead>
+    <% var i = 1 %>
+            <tbody>
+    <% videos.forEach(function(video) { %>
+                <tr>
+                    <th scope="row"><%= i %></th>
+                    <% i = i + 1 %>
+                    <td>   
+                        <a href="<%= video.ka_url %>"><%= video.title %></a>
+                    </td>
+                    <td><%= video.description %></td>
+                    <td>
+                        <a class="btn btn-sm btn-primary" href="/download-test/<%= video.id %>">Download Translation</a>
+                    </td>
+                </tr>
+    <% }) %>
+            </tbody>
+        </table>
+</div>
+
+<% include ./partials/footer %>

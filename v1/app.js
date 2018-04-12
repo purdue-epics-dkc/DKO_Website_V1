@@ -95,6 +95,17 @@ app.get("/select-videos", isLoggedIN, function(req, res) {
     res.render("select-videos", {topics: topics});
 });
 
+app.get("/download-videos/", isLoggedIN, function(req, res) {
+    Video.find({uploaded: true}, function(err, foundVideos) {
+        if (err) {
+            res.err(err + " \n " + regexQuery);
+        } else {
+            // res.send(foundVideos);
+            res.render("download-videos", {videos: foundVideos});
+        }
+    })
+});
+
 app.get("/select-videos/:domain/:topic", isLoggedIN, function(req, res) {
     var regexQuery = '^' + req.params.domain + '\\+\\$\\+' + req.params.topic + '.*';
     console.log(regexQuery);
@@ -128,14 +139,17 @@ app.get("/upload/:id/", isLoggedIN, function(req, res) {
     });
 });
 
-app.post('/upload-test', isLoggedIN, function(req, res) {
+app.post('/upload-test/:id', isLoggedIN, function(req, res) {
     console.log(req.files); // the uploaded file object
+
+    var currID = req.params.id;
+    var currFileName = "./upload_data/current_upload.txt";
 
     var sampleFile = req.files.sampleFile;
 
     var convertedSampleFile = JSON.stringify(sampleFile);
 
-    fs.writeFile("./upload_data/current_upload.txt", convertedSampleFile, function(err) {
+    fs.writeFile(currFileName, convertedSampleFile, function(err) {
         if(err) {
             console.log("The current upload was not saved!");
             return console.log(err);
@@ -143,12 +157,14 @@ app.post('/upload-test', isLoggedIN, function(req, res) {
 
         console.log("The current upload was saved!");
 
+        Video.update({ _id: currID }, { $set: { uploaded: true }}).exec();
+
         var params = {
-            localFile: "./upload_data/current_upload.txt",
+            localFile: currFileName,
            
             s3Params: {
               Bucket: "dkoupload",
-              Key: "current_upload.txt",
+              Key: "current_upload_" + currID + ".txt",
               // other options supported by putObject, except Body and ContentLength. 
               // See: http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#putObject-property 
             },
@@ -167,21 +183,27 @@ app.post('/upload-test', isLoggedIN, function(req, res) {
             console.log("done uploading");
             //res.redirect("/download-test");
             //res.send("done uploading file");
-            res.render("upload-complete");
 
+            fs.unlink(currFileName, (err) => {
+                if (err) throw err;
+                console.log('successfully deleted ' + currFileName);
+            });
+
+            res.render("upload-complete");
             // /Users/rahulpatni/Projects/DKO_Website_V1/v1/views/upload-complete.ejs
         }); 
     });
 });
 
-app.get("/download-test", function(req, res) {
+app.get("/download-test/:id", isLoggedIN, function(req, res) {
+    var currID = req.params.id;
     var localFile = "./upload_data/download_upload.txt"
     var params = {
         localFile: localFile,
        
         s3Params: {
           Bucket: "dkoupload",
-          Key: "current_upload.txt",
+          Key: "current_upload_" + currID + ".txt",
           // other options supported by getObject 
           // See: http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/S3.html#getObject-property 
         },
@@ -210,6 +232,12 @@ app.get("/download-test", function(req, res) {
                     return console.log(err);
                 }
                 console.log("The download file was saved!");
+
+                fs.unlink(localFile, (err) => {
+                    if (err) throw err;
+                    console.log('successfully deleted ' + localFile);
+                });
+
                 res.send("File downloaded");
             });
         });
