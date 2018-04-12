@@ -238,7 +238,8 @@ app.get("/download-test/:id", isLoggedIN, function(req, res) {
                     console.log('successfully deleted ' + localFile);
                 });
 
-                res.send("File downloaded");
+                // res.send("File downloaded");
+                res.render("download-complete");
             });
         });
     });
@@ -266,7 +267,11 @@ app.get("/admin/signup", function(req, res) {
 });
 
 app.get("/login", function(req, res) {
-    res.render("login");
+    if (req.isAuthenticated()) {
+        res.render("user/home")
+    } else {
+        res.render("login");
+    }
 });
 
 app.post("/login", passport.authenticate("local", 
