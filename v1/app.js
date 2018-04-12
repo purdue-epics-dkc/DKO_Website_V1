@@ -17,6 +17,8 @@ var app = express();
 
 // mongo stuff
 
+
+
 var videoSchema = new mongoose.Schema({
     user_id: String, 
     admin_id: String, 
@@ -93,6 +95,15 @@ app.get("/select-videos", isLoggedIN, function(req, res) {
     };
 
     res.render("select-videos", {topics: topics});
+});
+
+app.get("/delete-all-videos/", function(req, res) {
+    Video.find({uploaded: true}, function(err, foundVideos) {
+        foundVideos.forEach(function(video){
+            console.log(video);
+            Video.update({ _id: video.id }, { $set: { uploaded: false }}).exec();
+        });
+    });
 });
 
 app.get("/download-videos/", isLoggedIN, function(req, res) {
