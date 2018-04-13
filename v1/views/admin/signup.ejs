@@ -1,4 +1,7 @@
-<h1>Sign up as admin!</h1>
+<% include ../partials/header %>
+<div class="container">
+
+<h1>Sign up as admin</h1>
 
 <form action="/user/signup" method="POST">
     <input type="text" name="username" placeholder="username">
@@ -7,4 +10,8 @@
 </form>
 
 
-<a href="/login">Login in</a>
+<a class="btn btn-primary" href="/login">Back</a>
+
+</div>
+
+<% include ../partials/footer %>
