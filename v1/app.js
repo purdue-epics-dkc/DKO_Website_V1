@@ -104,6 +104,8 @@ app.get("/delete-all-videos/", function(req, res) {
             Video.update({ _id: video.id }, { $set: { uploaded: false }}).exec();
         });
     });
+
+    res.render("user/home");
 });
 
 app.get("/download-videos/", isLoggedIN, function(req, res) {
@@ -235,7 +237,7 @@ app.get("/download-test/:id", isLoggedIN, function(req, res) {
             }
 
             var parsedData = JSON.parse(data);
-            var name = "./upload_data/converted_" + parsedData.name;
+            var name = "./upload_data/downloaded_" + parsedData.name;
             console.log("pringing name " + name);
             console.log(name);
             fs.writeFile(name, new Buffer(parsedData.data), function(err) {

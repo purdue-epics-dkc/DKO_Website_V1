@@ -2,15 +2,19 @@
 
 <div class="container">
 
-    <h1>Upload video!</h1>
+    <h1>Upload video</h1>
+    <br>
+    <h5 class="text-center">You are uploading video with title: <%= video.title %></h5>
+    <br>
+    <br>
 
-    <p class="text-center">You are uploading video with title: <%= video.title %></p>
 
     <form ref='uploadForm' id='uploadForm' action="/upload-test/<%= video.id %>" method="POST" encType="multipart/form-data">
-            <p><input type="file" name="sampleFile" /></p>
 
             <p align="center"><iframe src="<%= video.embed_url %>" width=640 height="360"></iframe></p>
-
+            <br>
+            <p><input type="file" name="sampleFile" /></p>
+            <br>
             <p><input class="btn btn-primary" type='submit' value='Upload!'/></p>
     </form>
 </div>

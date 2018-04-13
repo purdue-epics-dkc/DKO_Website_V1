@@ -3,3 +3,4 @@ node_modules/
 .DS_Store
 upload_data
 v1/package-lock.json
+demo_data/

@@ -1,6 +1,14 @@
 <% include ./partials/header %>
 
 <div class="container">
+    <% if (videos.length == 0) { %>
+
+    <h1>You have no translations</h1>
+    
+    <a class="btn btn-primary" href="/user/home">Back</a>
+
+    <% } else { %>
+
     <h1>These are a list of uploaded videos</h1>
     <br>
     <table id="selected-video-table" class="table table-hover table-sm table-dark table-bordered">
@@ -28,6 +36,9 @@
     <% }) %>
             </tbody>
         </table>
+        <a class="btn btn-primary" href="/user/home">Back</a>
+
+    <% } %>
 </div>
 
 <% include ./partials/footer %>
